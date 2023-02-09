@@ -1,0 +1,21 @@
+{% extends "publico_base.njk" %}
+{% block titulo %}Juegos | Buscar{% endblock %}
+{% block contenido %}
+
+   <div>
+        <form class="row m-4" action="/buscar" method="get" enctype="multipart/form-data">
+            <label>
+                <input name="buscar" placeholder="Buscar..." class="form-control m-3"></input>
+            </label>
+            <button class="btn btn-primary m-3 w-25 ms-auto me-auto" type="submit">Buscar</button>
+        <form>
+    </div>
+
+{%if juegos%}
+    <ul>
+        {% for juego in juegos %}
+            <li><a href="juegos/{{ juego.id }}">{{ juego.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

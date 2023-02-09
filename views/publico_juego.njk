@@ -1,0 +1,23 @@
+{% extends "publico_base.njk" %}
+{% block titulo %}
+    Juego | Ficha juego
+{% endblock %}
+
+{% block contenido %}
+    <div class="me-auto ms-auto">
+        <h1>Ficha juego</h1>
+    </div>
+    
+    <div class="card w-25">
+        <img class="m-2"src="/public/uploads/{{ juego.imagen }}" alt="imagen">
+        <div class="card-body">
+            <h5 class="card-title">Nombre: {{ juego.nombre }}</h5>
+            <p class="card-text">Descripción: {{ juego.descripcion }}</p>
+            <p class="card-text">Edad: {{ juego.edad }}</p>
+            <p class="card-text">Numero de jugadores: {{ juego.jugadores }}</p>
+            <p class="card-text">Tipo: {{ juego.tipo.enum }}</p>
+            <p class="card-text">Precio: {{ juego.precio }}</p>
+            <p class="card-text">Imagen: {{ juego.imagen }}</p>
+        </div>
+    </div>
+{% endblock %}
