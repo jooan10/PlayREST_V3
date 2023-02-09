@@ -9,7 +9,7 @@ const juegos = require(__dirname + '/routes/juegos');
 const publico = require(__dirname + '/routes/publico');
 
 
-mongoose.connect('mongodb://localhost:27017/playrest_v3', {useNewUrlParser: true});
+mongoose.connect('mongodb://mymongodb/playrest_v3', {useNewUrlParser: true}); 
 
 
 let app = express();
